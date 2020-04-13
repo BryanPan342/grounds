@@ -1,0 +1,25 @@
+---
+layout: post
+current: post
+cover: 'assets/images/upside-down-interior.jpg'
+navigation: true
+title: Home
+date: 2020-01-19 09:00:0
+tags: places
+class: post-template
+subclass: 'post tag-getting-started'
+author: bryan
+---
+In a city, like Los Angeles, I find it all too easy to become consumed by the cacophony of hustle and bustle. The grind, the dream-chasing, the veganism, it's truly exhausting. Stuck in traffic on the 405, I sometimes wonder how a city could possibly have survived so long without public transportation. With a plethora of hole-in-the-wall cafes to find, it's hard to choose where to begin. But after a bit of introspection, and maybe a coffee or two, I guess the best place to start is close to home.
+<br/>  
+Amidst the ruckus of LA, I believe everyone should have a place where they can call home. The world is just too big and too scary to go about it alone. Whether it be your apartment, a cafe, a group of friends, "home" is a place where you can truly be yourself. Just a couple of blocks from UCLA is a coffee shop called **Upside Down**. Home to the beginning of my coffee obsession, a creative space, and amazingly kind baristas, **Upside Down** has a special place in my heart.
+<!-- <br/>  
+![image](/assets/images/upside-down-interior.jpg){:class="img"} -->
+<br/>  
+As the name suggests, **Upside Down** is all about creativity, paradoxically new perspectives, and fun. Run by Jews for Jesus, they believe in creating a space to connect with friends and meet new ones through the medium of coffee, art, and community. They genuinely care about the community they serve and dedicate themselves to the good of the neighborhood. I love **Upside Down**. Whenever I'm seeking a boost of productivity or creativity, this is my go-to spot to ground myself.
+<br/>  
+The baristas here are absolutely amazing. While they are incredibly kind and don't take themselves too seriously, they are super passionate about their coffee. Partnered with <a href="https://goldenstatecoffee.com/" target="_blank">Golden State Roasters</a>, **Upside Down** always has a fresh, single-origin Ethiopian on hand to make that amazing bright and medium-bodied coffee. While they have some pretty cool signature and classic drinks (try their Espresso Tonic), my go-to order is always always a pourover. Consistently, they make some of the best pourovers I have ever tried. If you are looking for something a little off the beaten path, like a hint of something new, I would highly recommend trying their pourovers, black.
+<!-- <br/>  
+![image](/assets/images/latte-pourover.jpg){:class="img"} -->
+<br/>  
+Cool fact: **Upside Down** is a donation-based coffee shop! So theoretically, you could come here and donate a dollar for an amazing coffee. But after meeting the baristas and feeling the energy that permeates the space, you'll quickly find out why so many people come here for more than just a cup of coffee. Maybe it's the ambiance or the people or the coffee, but there is just something about this place that makes me always come back. In the same way that you are nostalgic about your hometown, **Upside Down** is a place where you can always go back to, a place to call home.
