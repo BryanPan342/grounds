@@ -3,7 +3,7 @@ layout: page
 current: about
 title: About
 navigation: true
-logo: '/assets/images/gc.png'
+logo: 'assets/images/gc.png'
 class: page-template
 subclass: 'post page'
 ---
