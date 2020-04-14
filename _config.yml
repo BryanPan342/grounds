@@ -71,10 +71,10 @@ feed:
 safe: False
 lsi: False
 username: bryanpan342
-repo: blog
+repo: grounds
 branch: master
-relative_source: ../blog/
-destination: ../blog/_site
+relative_source: ../grounds/
+destination: ../grounds/_site
 production_url:  https://www.groundsofthecity.com/
 source_url:  https://github.com/bryanpan342/grounds/
 
