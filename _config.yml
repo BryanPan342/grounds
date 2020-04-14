@@ -6,7 +6,7 @@ language: 'en-us'
 words_per_minute: 180
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: '/grounds/'
+baseurl: ""
 
 # Website info
 title: The Grounds of the City
@@ -16,7 +16,7 @@ logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png
 share: False
-production_url: https://bryanpan342.github.io/grounds/
+production_url: https://www.groundsofthecity.com/
 source_url: https://github.com/bryanpan342/grounds/
 CNAME: www.groundsofthecity.com #add cname for website to be created
 
