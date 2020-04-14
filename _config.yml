@@ -72,7 +72,7 @@ safe: False
 lsi: False
 username: bryanpan342
 repo: grounds
-branch: master
+branch: gh-pages
 relative_source: ../grounds/
 destination: ../grounds/_site
 production_url:  https://www.groundsofthecity.com/
