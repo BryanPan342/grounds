@@ -105,24 +105,30 @@
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-<script>$(document).ready(function() {
-    let imgLoaded = false;
-    let timeCompleted = false;
-    let time = Math.random()*500 + 1000;
-    console.log($(document));
-    imagesLoaded($(document)).on('always', function(instance){
-        console.log("images loaded");
-        imgLoaded = true;
-        if(timeCompleted){
-            $('body').addClass('');
-        }
-    });
-    setTimeout(function(){
-        if(imgLoaded){
-            $('body').addClass('');
-        }
-        timeCompleted = true;
-    }, time);
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script>$(document).ready(function($) {
+    if (Cookies.get('preloaded')){
+        $('body').addClass('');
+    }
+    else {
+        let imgLoaded = false;
+        let timeCompleted = false;
+        let time = Math.random()*500 + 1000;
+        imagesLoaded($(document)).on('always', function(instance){
+            imgLoaded = true;
+            if(timeCompleted){
+                $('body').addClass('');
+            }
+        });
+        setTimeout(function(){
+            if(imgLoaded){
+                $('body').addClass('');
+            }
+            timeCompleted = true;
+        }, time);
+        
+        Cookies.set('preloaded', true, {path: '/', expire: 1});
+    }
 });
 </script>
 <!-- <script>$(document).imagesLoaded()
