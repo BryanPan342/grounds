@@ -53,6 +53,7 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
         let imgLoaded = false;
         let timeCompleted = false;
         let time = Math.random()*500;
+        let max_time = time + 1000;
         setTimeout(function(){
             if(imgLoaded){
                 $('body').addClass('loaded');
@@ -67,7 +68,7 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
         });
         setTimeout(function(){
             $('body').addClass('loaded');
-        }, time + 1000);
+        }, max_time);
         sessionStorage.isVisited = true;
     }
 });
