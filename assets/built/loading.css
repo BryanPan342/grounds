@@ -1,6 +1,8 @@
 /* 13. Preloader - CSS for preloader animation
 /* ---------------------------------------------------------- */
 .loader-wrapper {
+    --font-size: calc(6vw);
+    --midpoint: calc(50vw - (var(--font-size)/2*3.5));
     position: fixed;
     top: 0;
     left: 0;
@@ -9,71 +11,50 @@
     z-index: 1000;
 }
 
-.the{
+.loader-element {
     display: block; 
     position: absolute;
-    width: 85px;
-    left:200px;
-    opacity: 0;
     height: 100vh;
-    font-size: 60px;
+    opacity: 0;
+    font-size: var(--font-size);
     color: white;
+}
+
+.the{
+    width: 85px;
+    left: calc(50vw - (var(--font-size)/2*10));
     z-index:1003;
     -webkit-animation: ani 1s 1s cubic-bezier(.65,0,.37,.96) forwards;
         animation: ani 1s 1s cubic-bezier(.65,0,.37,.96) forwards;
 } 
 
 .grounds{
-    display: block;
-    position: absolute;
     width: 200px;
-    left: 300px;
-    height: 100vh;
-    font-size: 60px;
-    opacity: 0;
-    color: white;
+    left: calc(50vw - (var(--font-size)/2*6.5));
     z-index: 1004;
     -webkit-animation: aniup 1s 1.5s cubic-bezier(.65,0,.37,.96) forwards;
         animation: aniup 1s 1.5s cubic-bezier(.65,0,.37,.96) forwards;
 }
 
 .of{
-    display: block;
-    position: absolute;
     width: 50px;
-    left: 527px;
-    height: 100vh;
-    font-size: 60px;
-    opacity:0;
-    color: white;
+    left: calc(50vw + (var(--font-size)/2));
     z-index:1003;
     -webkit-animation: ani 1s 2s cubic-bezier(.65,0,.37,.96) forwards;
         animation: ani 1s 2s cubic-bezier(.65,0,.37,.96) forwards;
 }
 
 .the2{
-    display: block;
-    position: absolute;
     width: 75px;
-    left: 595px;
-    height: 100vh;
-    font-size: 60px;
-    opacity:0;
-    color: white;
+    left: calc(50vw + (var(--font-size)/2*3.5));
     z-index:1003;
     -webkit-animation: aniup 1s 2.5s cubic-bezier(.65,0,.37,.96) forwards;
         animation: aniup 1s 2.5s cubic-bezier(.65,0,.37,.96) forwards;
 }
 
 .city{
-    display: block;
-    position: absolute;
     width: 50px;
-    left: 690px;
-    height: 100vh;
-    font-size: 60px;
-    opacity:0;
-    color: white;
+    left: calc(50vw + (var(--font-size)/2*7));
     z-index:1003;
     -webkit-animation: ani 1s 3s cubic-bezier(.65,0,.37,.96) forwards;
         animation: ani 1s 3s cubic-bezier(.65,0,.37,.96) forwards;
@@ -150,23 +131,14 @@
 }
 
 /* Loaded */
-/* .loaded .loader-wrapper .loader-section {
-    -webkit-transform: translateY(-100%);  
-        -ms-transform: translateY(-100%); 
-            transform: translateY(-100%); 
-
-    -webkit-transition: all 1s .5s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-            transition: all 1s .5s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-} */
-
 .loaded .the, .loaded .grounds, .loaded .of,.loaded .the2,.loaded .city{
-    left: 350px;
+    left: var(--midpoint);
     -webkit-transition: all 1s cubic-bezier(.65,0,.37,.96);  
     transition: all 1s cubic-bezier(.65,0,.37,.96);
 }
 .loaded .the, .loaded .of,.loaded .the2,.loaded .city{
     color: black;
-    transition: all 1s cubic-bezier(.65,0,.37,.96);
+    transition: all .9s cubic-bezier(.65,0,.37,.96);
 }
 
 .loaded .loader-wrapper {
@@ -176,6 +148,6 @@
         -ms-transform: translateY(-100%);  
             transform: translateY(-100%); 
 
-    -webkit-transition: all .75s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;  
-            transition: all .75s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;
+    -webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;  
+            transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;
 }
