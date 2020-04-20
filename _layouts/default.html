@@ -52,8 +52,8 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
     else {
         let imgLoaded = false;
         let timeCompleted = false;
-        let time = Math.random()*500;
-        let max_time = time + 1000;
+        let time = 4000;
+        let max_time = Math.random()*500 + time;
         setTimeout(function(){
             if(imgLoaded){
                 $('body').addClass('loaded');
@@ -68,22 +68,26 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
         });
         setTimeout(function(){
             $('body').addClass('loaded');
+            // sessionStorage.isVisited = true;
         }, max_time);
-        sessionStorage.isVisited = true;
-    }
-});
+        }
+    });
 </script>
 <body class='{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{%endif%}''>
     <div class="site-wrapper">
         {% if page.class == 'home-template' %}
             <div class="loader-wrapper">
-                <div class="loader"></div>
-                <div class="loader-section section-left"></div>
+                <div class="the">the</div>
+                <div class="grounds">grounds</div>
+                <div class="of">of</div>
+                <div class="the2">the</div>
+                <div class="city">city</div>
+                <div class="loader-section"></div>
                 <!-- <div class="loader-section section-right"></div> -->
             </div>
         {% endif %}
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        {{ content }}
+        <!-- {{ content }} -->
 
         <!-- Previous/next page links - displayed on every page -->
         {% if paginator.total_posts > site.paginate %}
