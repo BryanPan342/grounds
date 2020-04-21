@@ -117,8 +117,8 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
     else {
         let imgLoaded = false;
         let timeCompleted = false;
-        let time = Math.random()*500;
-        let max_time = time + 1000;
+        let time = 4000;
+        let max_time = Math.random()*500 + time;
         setTimeout(function(){
             if(imgLoaded){
                 $('body').addClass('loaded');
@@ -133,16 +133,16 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
         });
         setTimeout(function(){
             $('body').addClass('loaded');
+            // sessionStorage.isVisited = true;
         }, max_time);
-        sessionStorage.isVisited = true;
-    }
-});
+        }
+    });
 </script>
 <body class='page-template''>
     <div class="site-wrapper">
         
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
+        <!-- <!-- < default -->
 <!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template -->
 
@@ -221,7 +221,7 @@ $(function() {
 });
 </script>
 
-
+ -->
 
         <!-- Previous/next page links - displayed on every page -->
         

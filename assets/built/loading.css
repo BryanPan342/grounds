@@ -1,6 +1,8 @@
 /* 13. Preloader - CSS for preloader animation
 /* ---------------------------------------------------------- */
 .loader-wrapper {
+    --font-size: calc(6vw);
+    --midpoint: calc(50vw - (var(--font-size)/2*3.5));
     position: fixed;
     top: 0;
     left: 0;
@@ -8,76 +10,111 @@
     height: 100%;
     z-index: 1000;
 }
-.loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #3498db;
 
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-
-    z-index: 1001;
-}
-
-.loader:before {
-    content: "";
+.loader-element {
+    display: block; 
     position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #e74c3c;
-
-    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    height: 100vh;
+    opacity: 0;
+    font-size: var(--font-size);
+    color: white;
 }
 
-.loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #f9c922;
+.the{
+    width: 85px;
+    left: calc(50vw - (var(--font-size)/2*10));
+    z-index:1003;
+    -webkit-animation: ani 1s 1s cubic-bezier(.65,0,.37,.96) forwards;
+        animation: ani 1s 1s cubic-bezier(.65,0,.37,.96) forwards;
+} 
 
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+.grounds{
+    width: 200px;
+    left: calc(50vw - (var(--font-size)/2*6.5));
+    z-index: 1004;
+    -webkit-animation: aniup 1s 1.5s cubic-bezier(.65,0,.37,.96) forwards;
+        animation: aniup 1s 1.5s cubic-bezier(.65,0,.37,.96) forwards;
 }
 
-@-webkit-keyframes spin {
+.of{
+    width: 50px;
+    left: calc(50vw + (var(--font-size)/2));
+    z-index:1003;
+    -webkit-animation: ani 1s 2s cubic-bezier(.65,0,.37,.96) forwards;
+        animation: ani 1s 2s cubic-bezier(.65,0,.37,.96) forwards;
+}
+
+.the2{
+    width: 75px;
+    left: calc(50vw + (var(--font-size)/2*3.5));
+    z-index:1003;
+    -webkit-animation: aniup 1s 2.5s cubic-bezier(.65,0,.37,.96) forwards;
+        animation: aniup 1s 2.5s cubic-bezier(.65,0,.37,.96) forwards;
+}
+
+.city{
+    width: 50px;
+    left: calc(50vw + (var(--font-size)/2*7));
+    z-index:1003;
+    -webkit-animation: ani 1s 3s cubic-bezier(.65,0,.37,.96) forwards;
+        animation: ani 1s 3s cubic-bezier(.65,0,.37,.96) forwards;
+}
+
+@-webkit-keyframes ani {
     0%   { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translate3D(0,-50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,-50%,0);  /* IE 9 */
+        transform: translate3D(0,-50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 0;
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translate3D(0,50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,50%,0);  /* IE 9 */
+        transform: translate3D(0,50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 1;
     }
 }
-@keyframes spin {
+@keyframes ani {
     0%   { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(0deg);  /* IE 9 */
-        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translate3D(0,-50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,-50%,0);  /* IE 9 */
+        transform: translate3D(0,-50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 0;
     }
     100% {
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: rotate(360deg);  /* IE 9 */
-        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        -webkit-transform: translate3D(0,50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,50%,0);  /* IE 9 */
+        transform: translate3D(0,50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes aniup {
+    0%   { 
+        -webkit-transform: translate3D(0,150%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,150%,0);  /* IE 9 */
+        transform: translate3D(0,150%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate3D(0,50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,50%,0);  /* IE 9 */
+        transform: translate3D(0,50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 1;
+    }
+}
+@keyframes aniup {
+    0%   { 
+        -webkit-transform: translate3D(0,150%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,150%,0);  /* IE 9 */
+        transform: translate3D(0,150%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate3D(0,50%,0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translate3D(0,50%,0);  /* IE 9 */
+        transform: translate3D(0,50%,0);  /* Firefox 16+, IE 10+, Opera */
+        opacity: 1;
     }
 }
 
@@ -86,7 +123,6 @@
     top: 0;
     width: 100%;
     height: 100%;
-    /* background: rgb(1, 20, 48);      /*navy blue*/
     background: #000000;
     z-index: 1000;
     -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
@@ -94,45 +130,24 @@
     transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
 }
 
-.loader-wrapper .loader-section.section-left {
-    top: 0;
-}
-
-.loader-wrapper .loader-section.section-right {
-    bottom: 0;
-}
-
 /* Loaded */
-.loaded .loader-wrapper .loader-section.section-left {
-    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateY(-100%);  /* IE 9 */
-            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
-
-    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+.loaded .the, .loaded .grounds, .loaded .of,.loaded .the2,.loaded .city{
+    left: var(--midpoint);
+    -webkit-transition: all 1s cubic-bezier(.65,0,.37,.96);  
+    transition: all 1s cubic-bezier(.65,0,.37,.96);
+}
+.loaded .the, .loaded .of,.loaded .the2,.loaded .city{
+    color: black;
+    transition: all .9s cubic-bezier(.65,0,.37,.96);
 }
 
-.loaded .loader-wrapper .loader-section.section-right {
-    -webkit-transform: translateY(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateY(100%);  /* IE 9 */
-            transform: translateY(100%);  /* Firefox 16+, IE 10+, Opera */
-
--webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-}
-
-.loaded .loader {
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-out;  
-            transition: all 0.3s ease-out;
-}
 .loaded .loader-wrapper {
     visibility: hidden;
 
-    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(-100%);  /* IE 9 */
-            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+    -webkit-transform: translateY(-100%);  
+        -ms-transform: translateY(-100%);  
+            transform: translateY(-100%); 
 
-    -webkit-transition: all 0.3s 1s ease-out;  
-            transition: all 0.3s 1s ease-out;
+    -webkit-transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;  
+            transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1.000) 1.25s;
 }
