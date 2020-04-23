@@ -757,8 +757,6 @@ The first (most recent) post in the list is styled to be bigger than the others 
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
 
-Usage (In Ghost edtior):
-
 ![img](/some/image.jpg#full)
 
 */
@@ -769,8 +767,6 @@ Usage (In Ghost edtior):
 
 
 /* Image captions
-
-Usage (In Ghost editor):
 
 ![img](/some/image.jpg)
 <small>Your image caption</small>
