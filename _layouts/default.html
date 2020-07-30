@@ -44,7 +44,7 @@ if (Cookies.get('preloaded')){
     $('.loader-wrapper').hide();
 }
 Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
-<script>$(document).ready(function($) {
+<!-- <script>$(document).ready(function($) {
     if(sessionStorage.isVisited){
         $('body').addClass('loaded');
         $('.loader-wrapper').hide();
@@ -72,10 +72,11 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
         }, max_time);
         }
     });
-</script>
+</script> -->
 <body class='{% if paginator.page > 1 %}paged archive-template{% elsif page.class %}{{ page.class }}{% else %}home-template{%endif%}''>
     <div class="site-wrapper">
-        {% if page.class == 'home-template' %}
+        <!-- LOADER -->
+        <!-- {% if page.class == 'home-template' %}
             <div class="loader-wrapper">
                 <div class="loader-element the">the</div>
                 <div class="loader-element grounds">grounds</div>
@@ -83,9 +84,9 @@ Cookies.set('preloaded', true, {path: '/', expires: 1}); -->
                 <div class="loader-element the2">the</div>
                 <div class="loader-element city">city</div>
                 <div class="loader-section"></div>
-                <!-- <div class="loader-section section-right"></div> -->
+                <div class="loader-section section-right"></div>
             </div>
-        {% endif %}
+        {% endif %} -->
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
         <!-- {{ content }} -->
 
